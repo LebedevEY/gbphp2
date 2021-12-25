@@ -43,7 +43,7 @@ class E extends D {
 }
 $a1 = new D;
 $b1 = new E;
-$a1->foo();     
+$a1->foo();
 $b1->foo();
 $a1->foo();
 $b1->foo();
