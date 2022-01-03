@@ -44,9 +44,9 @@ class PieceGoods extends Goods {
     private $price;
     private $margin;
     private $count;
-    function __construct ($margin, $dg) {
+    function __construct ($margin) {
         $this->margin = $margin;
-        $this->price = $dg->getPrice() / 2;
+        $this->price = DigitalGoods::PRICE * 2;
     }
     public function setCount($count)
     {
@@ -68,7 +68,7 @@ class PieceGoods extends Goods {
 
 }
 
-$pieceGoods = new PieceGoods(15, $digitGoods);
+$pieceGoods = new PieceGoods(15);
 $pieceGoods->setCount(5);
 echo $pieceGoods->getPrice() . "<br>";
 echo $pieceGoods->getSum() . "<br>";
