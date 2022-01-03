@@ -1,0 +1,16 @@
+{
+  "name": "vendor_name/gbphp2",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "q",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "twig/twig": "v2.14.6",
+    "ext-mysqli": "*"
+  }
+}
