@@ -1,10 +1,12 @@
 <?php
+include_once "../model/CatalogM.php";
 
+$goods = new CatalogM();
 $start = $_POST['start_point'];
 $end = $_POST['end_point'];
 
 
-$catalog = getGoods($connect, 'goods', $start, $end);
+$catalog = $goods->getMore($start, $end);
 
 if (is_array($catalog)) {
     foreach ($catalog as $item) {

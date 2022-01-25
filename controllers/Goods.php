@@ -3,9 +3,9 @@ include_once "../model/CatalogM.php";
 
 $goods = new CatalogM();
 $catalog = $goods->getCatalog();
+$index_catalog = $goods->getIndexCatalog();
 
 
-//
 //$catalog = getGoods($connect, 'goods', 0, 10);
 //$index_catalog = getGoods($connect, 'goods', 0, 7);
 //

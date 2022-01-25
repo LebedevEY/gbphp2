@@ -54,17 +54,17 @@ require_once "../controllers/Cart.php";
                             </button>
                             <ul class="cart__product__content__list">
                                 <li class="cart__product__content__list__item">Price: <span
-                                            style="color: #F16D7F;">$<?= $item['price'] ?></span>
+                                            style="color: #F16D7F;">&nbsp;$<?= $item['price'] ?></span>
                                 </li>
                                 <li class="cart__product__content__list__item">Color: <span
-                                            style="color: #656565;">Red</span>
+                                            style="color: #656565;">&nbsp;Red</span>
                                 </li>
                                 <li class="cart__product__content__list__item">Size: <span
-                                            style="color: #656565;">Xl</span>
+                                            style="color: #656565;">&nbsp;Xl</span>
                                 </li>
                                 <li class="cart__product__content__list__item">Quantity:
                                     <div class="quantity__div" id="quantity_<?= $item['good_id'] ?>">
-                                        <input class="quantity" type="text" value="<?= $item['count'] ?>">
+                                        <input id="quantity" class="quantity" type="text" value="<?= $item['count'] ?>">
                                         <button class="quantity__button"
                                                 onclick="moreQuantity(<?= $item['good_id'] ?>)">+
                                         </button>

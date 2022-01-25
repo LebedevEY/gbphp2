@@ -27,7 +27,25 @@ class CartM {
     }
 
     public function getCart() {
-        $query = "SELECT * FROM `cart`";
+        $query = "SELECT * FROM `cart` ORDER BY 'good_id'";
         return PdoM::Instance()->Select($query);
+    }
+
+    public function getSum() {
+        $query = "SELECT SUM(`price` * `count`) FROM `cart`";
+        return PdoM::Instance()->Select($query);
+    }
+
+    public function setCount($id, $value) {
+        $object = ['count' => $value];
+        return PdoM::Instance()->Update('cart', $object, "good_id=$id");
+    }
+
+    public function delGood($id) {
+        return PdoM::Instance()->Delete('cart', "id = $id");
+    }
+
+    public function clearCart() {
+        return PdoM::Instance()->Delete('cart', "id>0");
     }
 }

@@ -5,27 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c158c3e6-4bd0-459e-b9f3-56f7c4bc34da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/composer.phar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/Good.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/CartM.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/CatalogM.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/PdoM.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/ProductM.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/good_card.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/Catalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Catalog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/Goods.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Goods.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/CartM.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/CartM.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/CatalogM.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/CatalogM.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/catalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/catalog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/_catalog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/_catalog.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +72,7 @@
       <workItem from="1642440331770" duration="9365000" />
       <workItem from="1642851383224" duration="13902000" />
       <workItem from="1642926860058" duration="28002000" />
+      <workItem from="1643132288661" duration="6616000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,6 @@
+<?php
+require_once "../controllers/Goods.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

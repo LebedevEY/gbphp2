@@ -26,6 +26,7 @@ function delGood(id) {
         },
         success: function () {
             $('#cart').load(`cart.php #cart > *`);
+            $(`#sum`).load(`cart.php #sum > *`);
         }
     })
 }
@@ -39,6 +40,7 @@ function clearCart() {
         },
         success: function () {
             $('#cart').load(`cart.php #cart > *`);
+            $(`#sum`).load(`cart.php #sum > *`);
         }
     })
 
@@ -50,11 +52,13 @@ function moreQuantity(id) {
         url: '../controllers/Cart.php',
         data: {
             id: id,
-            action: 'count+'
+            action: 'count+',
+            quantity: document.getElementById('quantity').value
         },
         success: function () {
             $(`#quantity_${id}`).load(`cart.php #quantity_${id} > *`);
             $(`#sum`).load(`cart.php #sum > *`);
+
         },
     })
 }
@@ -65,7 +69,8 @@ function lessQuantity(id) {
         url: '../controllers/Cart.php',
         data: {
             id: id,
-            action: 'count-'
+            action: 'count-',
+            quantity: document.getElementById('quantity').value
         },
         success: function () {
             $(`#quantity_${id}`).load(`cart.php #quantity_${id} > *`);
