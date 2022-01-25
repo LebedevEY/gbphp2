@@ -38,7 +38,7 @@ require_once "../controllers/Cart.php";
         <div class="cart center">
             <div id="cart" class="cart__left">
                 <?php
-                foreach ($cart as $item) { ?>
+                foreach ($goods as $item) { ?>
                     <div class="cart__product">
                         <img class="cart__product_img" src="img/product_img/<?= $item['img'] ?>" alt="product photo">
                         <div class="cart__product__content">
@@ -65,8 +65,12 @@ require_once "../controllers/Cart.php";
                                 <li class="cart__product__content__list__item">Quantity:
                                     <div class="quantity__div" id="quantity_<?= $item['good_id'] ?>">
                                         <input class="quantity" type="text" value="<?= $item['count'] ?>">
-                                        <button class="quantity__button" onclick="moreQuantity(<?= $item['good_id'] ?>)">+</button>
-                                        <button class="quantity__button" onclick="lessQuantity(<?= $item['good_id'] ?>)">-</button>
+                                        <button class="quantity__button"
+                                                onclick="moreQuantity(<?= $item['good_id'] ?>)">+
+                                        </button>
+                                        <button class="quantity__button"
+                                                onclick="lessQuantity(<?= $item['good_id'] ?>)">-
+                                        </button>
                                     </div>
                                 </li>
                             </ul>
@@ -90,7 +94,8 @@ require_once "../controllers/Cart.php";
                     <button class="cart__right__form__button">GET A QUOTE</button>
                 </form>
                 <div id="sum" class="cart__right__total">
-                    <h4 class="cart__right__total__h4">SUB TOTAL <span style="margin-left: 20px;">$ <?= $sum[0] ?></span></h4>
+                    <h4 class="cart__right__total__h4">SUB TOTAL <span
+                                style="margin-left: 20px;">$ <?= $sum[0] ?></span></h4>
                     <h3 class="cart__right__total__h3">GRAND TOTAL <span
                                 style="margin-left: 20px; color: #F16D7F;">$ <?= $sum[0] ?></span></h3>
                     <hr class="cart__right__total__hr">

@@ -493,6 +493,22 @@
   margin-top: 48px;
 }
 
+.catalog_end {
+  background: white;
+  width: 420px;
+  height: 280px;
+  border-radius: 5px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.catalog_end-text {
+  font-size: 24px;
+  line-height: 29px;
+  color: #F16D7F;
+}
+
 .product__image {
   width: 100%;
   padding: 11px 0 42px;

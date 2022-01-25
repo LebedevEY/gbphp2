@@ -1,3 +1,6 @@
+<?php
+require_once "../controllers/Good.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,10 +17,6 @@
 </head>
 
 <body>
-<?php
-require "../controllers/Goods.php";
-?>
-
     <div class="wrapper">
         <div class="content">
             <? include "../templates/header.php"; ?>
@@ -34,16 +33,16 @@ require "../controllers/Goods.php";
             </div>
 
             <div class="product__image">
-                <img class="product__image__photo" src="img/product_img/<?= $good['img'] ?>" alt="product image">
+                <img class="product__image__photo" src="img/product_img/<?= $good[0]['img'] ?>" alt="product image">
             </div>
 
             <div class="descript">
                 <div class="description">
                     <a href="catalog.php" class="description__link">WOMEN COLLECTION</a>
                     <div class="description__hr-1"></div>
-                    <h1 class="description__h1"><?= $good['name'] ?></h1>
-                    <p class="description__text"><?= $good['description'] ?></p>
-                    <p class="description__price">$<?= $good['price'] ?>.00</p>
+                    <h1 class="description__h1"><?= $good[0]['name'] ?></h1>
+                    <p class="description__text"><?= $good[0]['description'] ?></p>
+                    <p class="description__price">$<?= $good[0]['price'] ?>.00</p>
                     <div class="description__hr-2"></div>
                     <div class="product__filter">
                         <details>
@@ -62,7 +61,7 @@ require "../controllers/Goods.php";
                             <summary>QUANTITY</summary>
                         </details>
                     </div>
-                    <button onclick="addGood(<?= $good['id'] ?>)" class="product__btn">
+                    <button onclick="addGood(<?= $good[0]['id'] ?>)" class="product__btn">
                         <svg class="product__cart" width="27" height="25" viewBox="0 0 27 25" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path

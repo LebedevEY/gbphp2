@@ -7,8 +7,9 @@ function addGood(id) {
             id: id,
             action: 'add'
         },
-        success: function () {
+        success: function (data) {
             document.getElementById('circle').style.display = 'block';
+            console.log(data)
             alert('Товар добавлен в корзину');
         }
     });
@@ -73,15 +74,21 @@ function lessQuantity(id) {
     })
 }
 
-function getMore(i) {
+let i = 9;
+let j = 19;
+
+function getMore() {
     $.ajax({
         type: 'POST',
-        url: '../controllers/Goods.php',
+        url: '../controllers/Catalog.php',
         data: {
-            point: i
+            start_point: i,
+            end_point: j
         },
-        success: function () {
-            $('#catalog').load('catalog.php #catalog > *');
+        success: function (data) {
+            $('#catalog').append(data);
+            i += 9;
+            j += 9;
         }
     })
 }
