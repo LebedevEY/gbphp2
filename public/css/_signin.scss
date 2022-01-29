@@ -1,0 +1,50 @@
+.signin__ {
+  &form {
+      display: flex;
+      flex-direction: column;
+      max-width: 480px;
+      align-items: center;
+      margin: 120px auto 240px;
+  }
+
+  &heading {
+    font-size: 27px;
+    line-height: 29px;
+    color: #F16D7F;
+  }
+
+  &input {
+    padding: 13px 18px 16px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #222;
+    margin-top: 21px;
+    border: 1px solid #A4A4A4;
+    width: 100%;
+  }
+
+  &button {
+    font-family: Lato, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background-color: #F16D7F;
+    padding: 16px 29px;
+    border: none;
+    outline: none;
+    width: fit-content;
+    transition: 0.2s;
+    margin-top: 21px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: $listColor;
+    }
+  }
+}
