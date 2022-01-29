@@ -325,6 +325,15 @@
   margin-bottom: 16px;
 }
 
+.user__check {
+  display: none;
+  font-size: 35px;
+  line-height: 29px;
+  color: #F16D7F;
+  margin: 40px auto;
+  width: fit-content;
+}
+
 .page__name {
   height: 148px;
   display: flex;

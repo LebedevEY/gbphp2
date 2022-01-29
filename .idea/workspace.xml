@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c158c3e6-4bd0-459e-b9f3-56f7c4bc34da" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/UserM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/_signin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/PdoM.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/PdoM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ajax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/_registration.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/_registration.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/registration.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +26,13 @@
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="6b2dda20-00c3-4909-bdff-cb8e5c50418a" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,7 +54,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -70,7 +84,7 @@
       <workItem from="1642851383224" duration="13902000" />
       <workItem from="1642926860058" duration="28002000" />
       <workItem from="1643132288661" duration="7235000" />
-      <workItem from="1643444799538" duration="1739000" />
+      <workItem from="1643444799538" duration="17411000" />
     </task>
     <servers />
   </component>

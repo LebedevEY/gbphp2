@@ -37,7 +37,7 @@ class PdoM {
     public function Insert($table, $columns, $values) {
         $columns_str = implode(',', $columns);
         $values_str = implode(',', $values);
-        $query = "INSERT INTO $table ($columns_str) VALUES ($values_str)";
+        $query = "INSERT INTO `$table` ($columns_str) VALUES ($values_str)";
         $q = $this->db->prepare($query);
         $q->execute();
 

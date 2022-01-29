@@ -64,7 +64,7 @@
         <p class="header__icons"><label for="switcher"><img src="/public/img/menu.svg" alt="menu"></label>
         </p>
         <div class="header__links">
-            <a class="header__icons" href="/public/registration.php"><img src="/public/img/account.svg"
+            <a class="header__icons" href="/public/login.php"><img src="/public/img/account.svg"
                                                                           alt="account"></a>
             <a class="header__icons" href="/public/cart.php"><img src="/public/img/cart.svg" alt="cart"><img id="circle"
                                                                                                              class="cart__circle"

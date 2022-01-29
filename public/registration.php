@@ -1,5 +1,5 @@
 <?php
-require_once "../controllers/Goods.php";
+require_once "../controllers/User.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,13 +31,13 @@ require_once "../controllers/Goods.php";
                 </li>
             </ul>
         </div>
-
+        <h1 class="user__check" style="<? if ($check == true) {echo 'display: block';} ?>">Пользователь с таким email уже зарегистрирован</h1>
         <div class="registration center">
             <div class="registration__left">
-                <form class="registration__left__form" action="#">
+                <form class="registration__left__form" method="post" id="registration_form">
                     <h3 class="registration__left__heading">Your Name</h3>
-                    <input class="registration__left__input" type="text" placeholder="First Name" required>
-                    <input class="registration__left__input" type="text" placeholder="Last Name" required>
+                    <input class="registration__left__input" type="text" placeholder="First Name" name="name" required>
+                    <input class="registration__left__input" type="text" placeholder="Last Name" name="surname" required>
                     <div class="registration__left__form_sex">
                         <p class="registration__left__form_sex-input"><input id="Male" name="sex" type="radio"
                                                                              value="male"><label
@@ -47,14 +47,14 @@ require_once "../controllers/Goods.php";
                         </p>
                     </div>
                     <h3 class="registration__left__heading">Login details</h3>
-                    <input class="registration__left__input" type="email" placeholder="Email" required>
-                    <input class="registration__left__input" type="password" placeholder="Password" required>
+                    <input class="registration__left__input" type="email" placeholder="Email" name="email" required>
+                    <input class="registration__left__input" type="password" placeholder="Password" name="password" required>
                     <p class="registration__left__text">Please use 8 or more characters, with at least 1 number and
                         a
                         mixture of uppercase and
                         lowercase
                         letters</p>
-                    <button class="registration__left__button">JOIN NOW
+                    <button class="registration__left__button" type="submit">JOIN NOW
                         <svg style="margin-left: 20px;" width="17"
                              height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
