@@ -68,7 +68,7 @@
                                                                           alt="account"></a>
             <a class="header__icons" href="/public/cart.php"><img src="/public/img/cart.svg" alt="cart"><img id="circle"
                                                                                                              class="cart__circle"
-                                                                                                             <?php if ($_SESSION['cart_empty'] == 0) {
+                                                                                                             <?php if (isset($_SESSION['cart_empty']) && $_SESSION['cart_empty'] === 0) {
                                                                                                                  echo 'style="display: block"';
                                                                                                              } ?>src="/public/img/white_circle.png"
                                                                                                              alt="#"></a>

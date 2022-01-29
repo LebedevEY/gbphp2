@@ -92,8 +92,10 @@ function getMore() {
         },
         success: function (data) {
             $('#catalog').append(data);
-            i += 9;
-            j += 9;
+            i += 10;
+            j += 10;
+            console.log('start' + i)
+            console.log('end' + j)
         }
     })
 }
