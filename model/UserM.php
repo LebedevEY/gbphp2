@@ -14,4 +14,8 @@ class UserM {
         }
         return PdoM::Instance()->Insert('users', $columns, $values);
     }
+
+    public function getUser($email, $password) {
+        return PdoM::Instance()->Select("SELECT * FROM `users` WHERE email='$email' AND password='$password'");
+    }
 }

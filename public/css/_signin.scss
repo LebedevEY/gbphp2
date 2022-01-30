@@ -1,10 +1,10 @@
 .signin__ {
   &form {
-      display: flex;
-      flex-direction: column;
-      max-width: 480px;
-      align-items: center;
-      margin: 120px auto 240px;
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    align-items: center;
+    margin: 120px auto 240px;
   }
 
   &heading {
@@ -46,5 +46,18 @@
     &:active {
       background-color: $listColor;
     }
+  }
+
+  &text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #636363;
+    text-transform: uppercase;
+    margin-top: 24px;
+  }
+
+  &link {
+    color: #F16D7F;
   }
 }

@@ -775,6 +775,42 @@
 .signin__button:active {
   background-color: #EF5B70;
 }
+.signin__text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #636363;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+.signin__link {
+  color: #F16D7F;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 220px 0 360px;
+  align-items: center;
+}
+.profile__header {
+  font-size: 48px;
+  line-height: 29px;
+  color: #F16D7F;
+  width: fit-content;
+}
+.profile__button {
+  padding: 15px 41px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  background-color: #F16D7F;
+  border: none;
+  outline: none;
+  margin-top: 24px;
+}
 
 * {
   margin: 0;
@@ -1470,7 +1506,8 @@ body {
     padding: 0;
   }
   .footer__review .footer__form .form__input {
-    width: 244px;
+    width: 220px;
+    margin: 0 auto;
   }
   .footer__review .footer__form .form__btn {
     width: 97px;

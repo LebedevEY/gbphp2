@@ -1,0 +1,26 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 220px 0 360px;
+  align-items: center;
+
+  &__header {
+    font-size: 48px;
+    line-height: 29px;
+    color: #F16D7F;
+    width: fit-content;
+  }
+
+  &__button {
+    padding: 15px 41px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background-color: #F16D7F;
+    border: none;
+    outline: none;
+    margin-top: 24px;
+  }
+}

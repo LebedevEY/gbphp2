@@ -1,4 +1,7 @@
-<!doctype html>
+<?php
+include_once "../controllers/User.php"
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,8 +31,8 @@
         </div>
         <form class="signin__form" method="post" id="signin_form">
             <h3 class="signin__heading">Enter your email and password</h3>
-            <input class="signin__input" type="text" placeholder="Email" name="email" required>
-            <input class="signin__input" type="text" placeholder="Password" name="password" required>
+            <input class="signin__input" type="email" placeholder="Email" name="email" required>
+            <input class="signin__input" type="password" placeholder="Password" name="password" required>
             <button class="signin__button" type="submit">SIGN IN
                 <svg style="margin-left: 20px;" width="17"
                      height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,6 +44,7 @@
                           fill="white"/>
                 </svg>
             </button>
+            <p class="signin__text">Ещё не зарегистрирован? <a class="signin__link" href="registration.php">Пройти регистрацию!</a></p>
         </form>
     </div>
     <? include "../templates/footer.php" ?>

@@ -15,7 +15,16 @@ if ($user['name'] != null) {
     $i = $USER->Registration($user, $user['email']);
     if ($i == false) {
         $check = true;
-    } else {
-        $_SESSION['user'] = $user;
     }
+}
+
+if ($user['email'] != null) {
+    $i = $USER->getUser($user['email'], $user['password']);
+    $_SESSION['user'] = $i[0];
+}
+
+if ($_SESSION['user']['name'] != null && $_SESSION['user']['admin'] == 1) {
+    header("Location: admin.php");
+} elseif ($_SESSION['user']['name'] != null) {
+    header("Location: profile.php");
 }

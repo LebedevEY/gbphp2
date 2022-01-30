@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 const DRIVER = "mysql";
 const SERVER = "localhost";

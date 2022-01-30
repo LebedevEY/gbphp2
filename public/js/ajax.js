@@ -46,6 +46,16 @@ function clearCart() {
 
 }
 
+function addOrder() {
+    $.ajax({
+        type: 'POST',
+        url: '../controllers/Cart.php',
+        data: {
+
+        }
+    })
+}
+
 function moreQuantity(id) {
     $.ajax({
         type: 'POST',
@@ -94,8 +104,6 @@ function getMore() {
             $('#catalog').append(data);
             i += 10;
             j += 10;
-            console.log('start' + i)
-            console.log('end' + j)
         }
     })
 }
