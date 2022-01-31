@@ -1,3 +1,6 @@
+<?php
+include_once "../controllers/Profile.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <script src="js/jquery.js"></script>
     <script src="js/ajax.js"></script>
-    <title>Вход</title>
+    <title>Личный кабинет</title>
 </head>
 <body>
 <div class="wrapper">
@@ -27,8 +30,8 @@
             </ul>
         </div>
         <div class="profile">
-            <h1 class="profile__header">Добро пожаловать!</h1>
-            <button class="profile__button">Выход</button>
+            <h1 class="profile__header">Добро пожаловать <?php print_r($user['name']) ?>!</h1>
+            <button onclick="exit()" class="profile__button">Выход</button>
         </div>
     </div>
     <?include "../templates/footer.php"?>

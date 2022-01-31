@@ -107,3 +107,16 @@ function getMore() {
         }
     })
 }
+
+function exit() {
+    $.ajax({
+        type: 'POST',
+        url: '../controllers/Profile.php',
+        data: {
+            action: 'exit'
+        },
+        success: function () {
+            window.location='login.php';
+        }
+    })
+}

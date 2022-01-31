@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c158c3e6-4bd0-459e-b9f3-56f7c4bc34da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/_profile.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/Profile.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/Good.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/Good.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/CartM.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/CartM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/PdoM.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/PdoM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/UserM.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/UserM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/_m375.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/_m375.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/_signin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/_signin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/profile.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,8 @@
       <workItem from="1642926860058" duration="28002000" />
       <workItem from="1643132288661" duration="7235000" />
       <workItem from="1643444799538" duration="18628000" />
-      <workItem from="1643527729818" duration="18262000" />
+      <workItem from="1643527729818" duration="18423000" />
+      <workItem from="1643644828573" duration="7297000" />
     </task>
     <servers />
   </component>

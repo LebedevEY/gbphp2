@@ -1,5 +1,6 @@
 <?php
 include_once "../model/CartM.php";
+
 $cart = new CartM();
 $goods = $cart->getCart();
 $sum = array_values(array_pop($cart->getSum()));
