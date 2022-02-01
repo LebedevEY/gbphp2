@@ -20,7 +20,6 @@ class PdoM {
         $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
 
-
     public function Select($query) {
         $q = $this->db->prepare($query);
         $q->execute();

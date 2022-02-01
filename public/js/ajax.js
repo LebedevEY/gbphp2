@@ -46,16 +46,6 @@ function clearCart() {
 
 }
 
-function addOrder() {
-    $.ajax({
-        type: 'POST',
-        url: '../controllers/Cart.php',
-        data: {
-
-        }
-    })
-}
-
 function moreQuantity(id) {
     $.ajax({
         type: 'POST',
@@ -117,6 +107,21 @@ function exit() {
         },
         success: function () {
             window.location='login.php';
+        }
+    })
+}
+
+function order() {
+    $.ajax({
+        type: 'POST',
+        url: '../controllers/Cart.php',
+        data: {
+            action: 'order'
+        },
+        success: function () {
+            $('#cart').load(`cart.php #cart > *`);
+            $(`#sum`).load(`cart.php #sum > *`);
+            $('#order').append("<h1>Заказ оформлен!</h1>")
         }
     })
 }

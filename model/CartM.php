@@ -4,7 +4,7 @@ include_once "PdoM.php";
 
 class CartM {
     public function addGood($id) {
-        $user = $_SESSION['user']['name'];
+        $user = $_SESSION['user']['id'];
         $good = PdoM::Instance()->Select("SELECT * FROM goods WHERE id=$id");
         $i = PdoM::Instance()->Select("SELECT * FROM cart WHERE good_id = $id");
         if (count($i) != 0) {
@@ -48,5 +48,9 @@ class CartM {
 
     public function clearCart() {
         return PdoM::Instance()->Delete('cart', "id>0");
+    }
+
+    public function order($columns, $values) {
+        return PdoM::Instance()->Insert('orders', $columns, $values);
     }
 }

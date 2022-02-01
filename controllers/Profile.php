@@ -7,5 +7,5 @@ if (!isset($user)) {
 }
 
 if ($_POST['action'] == 'exit') {
-    $_SESSION['user'] = null;
+    unset($_SESSION['user']);
 }

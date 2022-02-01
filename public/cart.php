@@ -34,7 +34,7 @@ require_once "../controllers/Cart.php";
             </ul>
         </div>
 
-
+        <div id="order" style="margin: 40px auto; width: fit-content"></div>
         <div class="cart center">
             <div id="cart" class="cart__left">
                 <?php
@@ -64,7 +64,7 @@ require_once "../controllers/Cart.php";
                                 </li>
                                 <li class="cart__product__content__list__item">Quantity:
                                     <div class="quantity__div" id="quantity_<?= $item['good_id'] ?>">
-                                        <input id="quantity" class="quantity" type="text" value="<?= $item['count'] ?>">
+                                        <input id="quantity" class="quantity" type="text" disabled value="<?= $item['count'] ?>">
                                         <button class="quantity__button"
                                                 onclick="moreQuantity(<?= $item['good_id'] ?>)">+
                                         </button>
@@ -99,7 +99,7 @@ require_once "../controllers/Cart.php";
                     <h3 class="cart__right__total__h3">GRAND TOTAL <span
                                 style="margin-left: 20px; color: #F16D7F;">$ <?= $sum[0] ?></span></h3>
                     <hr class="cart__right__total__hr">
-                    <button class="cart__right__total__button">PROCEED TO CHECKOUT</button>
+                    <button onclick="order()" class="cart__right__total__button">PROCEED TO CHECKOUT</button>
                 </div>
             </div>
         </div>

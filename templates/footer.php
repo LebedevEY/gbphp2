@@ -57,7 +57,7 @@
         </div>
     </div>
     <div class="footer__bottom center">
-        <p class="footer__copy">&copy; 2021 Brand All Rights Reserved.</p>
+        <p class="footer__copy">&copy; 2022 Brand All Rights Reserved.</p>
         <div class="smm">
             <a class="smm__link" href="https://www.facebook.com/" target="_blank">
                 <svg class="smm_icon"
