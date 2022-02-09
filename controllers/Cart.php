@@ -43,6 +43,7 @@ switch ($_POST['action']) {
             $index = $cart->order($columns, $values);
         }
         $cart->clearCart();
+        echo $user_id;
         break;
 }
 
@@ -51,58 +52,3 @@ if (count($goods) != 0) {
 } else {
     $_SESSION['cart_empty'] = 1;
 }
-
-//$count = 1;
-//$id = $_POST['id'];
-//$cart = Pd($connect, 'cart');
-//
-//$sum = getSum($connect, 'price', 'count', 'cart');
-//
-//if ($sum[0] == '') {
-//    $sum[0] = 0;
-//}
-//
-
-//
-//if (isset($_POST['action'])  and $_POST['action'] === 'add') {
-//    $good = getOne($connect, $id, 'goods');
-//    $cart_sql = "SELECT * FROM `cart` WHERE `good_id` = {$id}";
-//    $cart_res = mysqli_query($connect, $cart_sql);
-//    $i = mysqli_fetch_assoc($cart_res);
-//
-//    if (isset($i)){
-//        $count = $i['count'];
-//        $count++;
-//        cartCounter($connect, $id, $count);
-//    } else {
-//        $sql = "INSERT INTO `cart` (`id`, `good_id`, `name`, `img`, `price`, `count`, `user`) VALUES (NULL, '{$id}', '{$good['name']}', '{$good['img']}', '{$good['price']}', '{$count}', '{$user}');";
-//        $res = mysqli_query($connect, $sql);
-//    }
-//}
-//
-//if (isset($_POST['action'])  and $_POST['action'] === 'delete') {
-//    $sql = "DELETE FROM `cart` WHERE `id` = {$id}";
-//    $res = mysqli_query($connect, $sql);
-//}
-//
-//if (isset($_POST['action']) and $_POST['action'] === 'clear') {
-//    $sql = "DELETE FROM `cart`";
-//    $res = mysqli_query($connect, $sql);
-//}
-//
-//if (isset($_POST['action'])) {
-//    $cart_sql = "SELECT * FROM `cart` WHERE `good_id` = {$id}";
-//    $cart_res = mysqli_query($connect, $cart_sql);
-//    $i = mysqli_fetch_assoc($cart_res);
-//    if (isset($i) and $_POST['action'] == 'count+') {
-//        $count = $i['count'];
-//        $count++;
-//        cartCounter($connect, $id, $count);
-//    } elseif (isset($i) and $_POST['action'] == 'count-') {
-//        if ($count > 0) {
-//            $count = $i['count'];
-//            $count--;
-//            cartCounter($connect, $id, $count);
-//        }
-//    }
-//}

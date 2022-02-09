@@ -28,7 +28,3 @@ if ($_SESSION['user']['name'] != null && $_SESSION['user']['admin'] == 1) {
 } elseif ($_SESSION['user']['name'] != null) {
     header("Location: profile.php");
 }
-//var_dump($_SESSION['user']);
-//if ($_POST['action'] == 'exit') {
-//    $_SESSION['user'] = null;
-//}

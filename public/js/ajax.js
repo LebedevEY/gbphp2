@@ -92,8 +92,8 @@ function getMore() {
         },
         success: function (data) {
             $('#catalog').append(data);
-            i += 10;
-            j += 10;
+            i += 9
+            j += 9
         }
     })
 }
@@ -118,9 +118,10 @@ function order() {
         data: {
             action: 'order'
         },
-        success: function () {
+        success: function (data) {
             $('#cart').load(`cart.php #cart > *`);
             $(`#sum`).load(`cart.php #sum > *`);
+            console.log(data)
             $('#order').append("<h1>Заказ оформлен!</h1>")
         }
     })
