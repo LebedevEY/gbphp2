@@ -1,16 +1,21 @@
 function addGood(id) {
 
     $.ajax({
-        type: 'POST',
-        url: '../controllers/Cart.php',
+        type: 'GET',
+        url: '../index.php',
         data: {
             id: id,
-            action: 'add'
+            c: 'cart',
+            action: 'addGood'
         },
         success: function (data) {
-            document.getElementById('circle').style.display = 'block';
             console.log(data)
-            alert('Товар добавлен в корзину');
+            if (data) {
+                document.getElementById('circle').style.display = 'block';
+                alert('Товар добавлен в корзину');
+            } else {
+                alert('Для покупки товара необходимо зарегистрироваться или войти')
+            }
         }
     });
 }
@@ -18,15 +23,18 @@ function addGood(id) {
 function delGood(id) {
 
     $.ajax({
-        type: 'POST',
-        url: '../controllers/Cart.php',
+        type: 'GET',
+        url: '../index.php',
         data: {
             id: id,
-            action: 'delete'
+            c: 'cart',
+            action: 'delGood'
         },
-        success: function () {
-            $('#cart').load(`cart.php #cart > *`);
-            $(`#sum`).load(`cart.php #sum > *`);
+        success: function (data) {
+            console.log(data)
+            // $('#cart').load(`view/cart.php #cart > *`);
+            // $(`#sum`).load(`view/cart.php #sum > *`);
+            location.reload();
         }
     })
 }
@@ -85,8 +93,9 @@ let j = 19;
 function getMore() {
     $.ajax({
         type: 'POST',
-        url: '../controllers/Catalog.php',
+        url: './controllers/CatalogC.php',
         data: {
+            action: 'get',
             start_point: i,
             end_point: j
         },
@@ -94,19 +103,7 @@ function getMore() {
             $('#catalog').append(data);
             i += 9
             j += 9
-        }
-    })
-}
-
-function exit() {
-    $.ajax({
-        type: 'POST',
-        url: '../controllers/Profile.php',
-        data: {
-            action: 'exit'
-        },
-        success: function () {
-            window.location='login.php';
+            console.log(data)
         }
     })
 }
@@ -119,10 +116,13 @@ function order() {
             action: 'order'
         },
         success: function (data) {
-            $('#cart').load(`cart.php #cart > *`);
-            $(`#sum`).load(`cart.php #sum > *`);
-            console.log(data)
-            $('#order').append("<h1>Заказ оформлен!</h1>")
+            if (data == false) {
+                alert('Корзина пуста')
+            } else {
+                $('#cart').load(`cart.php #cart > *`);
+                $(`#sum`).load(`cart.php #sum > *`);
+                $('#order').append("<h1>Заказ оформлен!</h1>")
+            }
         }
     })
 }

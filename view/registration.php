@@ -1,6 +1,3 @@
-<?php
-require_once "../controllers/User.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,11 +5,11 @@ require_once "../controllers/User.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="view/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <script src="js/jquery.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="view/js/jquery.js"></script>
+    <script src="view/js/ajax.js"></script>
     <title>Регистрация</title>
 </head>
 
@@ -20,7 +17,7 @@ require_once "../controllers/User.php";
 <div class="wrapper">
     <div class="content">
 
-        <?php include "../templates/header.php"; ?>
+        <?php include "./templates/header.php"; ?>
 
         <div class="page__name center">
             <h1 class="page__heading">REGISTRATION</h1>
@@ -84,7 +81,7 @@ require_once "../controllers/User.php";
         </div>
     </div>
 
-    <?php include "../templates/footer.php"; ?>
+    <?php include "./templates/footer.php"; ?>
 </div>
 </body>
 

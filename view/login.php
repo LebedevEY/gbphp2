@@ -1,6 +1,3 @@
-<?php
-include_once "../controllers/User.php"
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +6,17 @@ include_once "../controllers/User.php"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="view/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <script src="js/jquery.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="view/js/jquery.js"></script>
+    <script src="view/js/ajax.js"></script>
     <title>Вход</title>
 </head>
 <body>
 <div class="wrapper">
     <div class="content">
-        <? include "../templates/header.php" ?>
+        <? include "./templates/header.php" ?>
         <div class="page__name center">
             <h1 class="page__heading">SIGN IN</h1>
             <ul class="breadcrumb">
@@ -29,7 +26,8 @@ include_once "../controllers/User.php"
                 </li>
             </ul>
         </div>
-        <form class="signin__form" method="post" id="signin_form">
+        <h1 class="user__check" style="<? if ($check == true) {echo 'display: block';} ?>">Пользователь с таким email не найден</h1>
+        <form class="signin__form" method="post" action="index.php?c=profile&action=login">
             <h3 class="signin__heading">Enter your email and password</h3>
             <input class="signin__input" type="email" placeholder="Email" name="email" required>
             <input class="signin__input" type="password" placeholder="Password" name="password" required>
@@ -44,10 +42,10 @@ include_once "../controllers/User.php"
                           fill="white"/>
                 </svg>
             </button>
-            <p class="signin__text">Ещё не зарегистрирован? <a class="signin__link" href="registration.php">Пройти регистрацию!</a></p>
+            <p class="signin__text">Ещё не зарегистрирован? <a class="signin__link" href="index.php?c=profile&action=registration">Пройти регистрацию!</a></p>
         </form>
     </div>
-    <? include "../templates/footer.php" ?>
+    <? include "./templates/footer.php" ?>
 </div>
 
 </body>

@@ -1,5 +1,4 @@
 <?php
-include_once "../model/PdoM.php";
 
 $user = $_SESSION['user'];
 

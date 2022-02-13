@@ -1,6 +1,3 @@
-<?php
-require_once "../controllers/Goods.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,18 +5,18 @@ require_once "../controllers/Goods.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="view/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <script src="js/jquery.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="view/js/jquery.js"></script>
+    <script src="view/js/ajax.js"></script>
     <title>Каталог</title>
 </head>
 
 <body>
 <div class="wrapper">
     <div class="content">
-        <? include "../templates/header.php"; ?>
+        <? include "./templates/header.php"; ?>
         <div class="page__name center">
             <h1 class="page__heading">NEW ARRIVALS</h1>
             <ul class="breadcrumb">
@@ -149,14 +146,14 @@ require_once "../controllers/Goods.php";
             <div id="catalog" class="products__box center">
                 <?php
                 foreach ($catalog as $item) {
-                    include "../templates/good_card.php";
+                    include "./templates/good_card.php";
                 } ?>
             </div>
             <button onclick="getMore()" class="products__btn"><p class="products__btn__text">Get more</p></button>
         </section>
     </div>
 
-    <?php include "../templates/footer.php"; ?>
+    <?php include "./templates/footer.php"; ?>
 </div>
 </body>
 

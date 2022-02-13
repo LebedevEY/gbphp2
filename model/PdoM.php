@@ -1,6 +1,6 @@
 <?php
 
-include_once "../config.php";
+include_once 'config.php';
 
 class PdoM {
     private static $instance;
@@ -25,8 +25,7 @@ class PdoM {
         $q->execute();
 
         if ($q -> errorCode() != PDO::ERR_NONE) {
-            $info = $q -> errorInfo();
-            die($info[2]);
+           return $q -> errorInfo();
         }
 
         return $q->fetchAll();

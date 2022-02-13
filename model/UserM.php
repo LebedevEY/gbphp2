@@ -1,11 +1,9 @@
 <?php
 
-require_once 'PdoM.php';
-
 class UserM {
     public function Registration($user, $email) {
         $i = PdoM::Instance()->Select("SELECT * FROM `users` WHERE email='$email'");
-        if ($i[0]['email'] == $email){
+        if (isset($i[0]['email']) && $i[0]['email'] == $email){
             return false;
         }
         foreach ($user as $key => $value) {
@@ -16,6 +14,7 @@ class UserM {
     }
 
     public function getUser($email, $password) {
-        return PdoM::Instance()->Select("SELECT * FROM `users` WHERE email='$email' AND password='$password'");
+        $i = PdoM::Instance()->Select("SELECT * FROM `users` WHERE email='$email' AND password='$password'");
+        return $i;
     }
 }

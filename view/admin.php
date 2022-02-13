@@ -1,6 +1,3 @@
-<?php
-include_once "../controllers/Profile.php";
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,10 +14,10 @@ include_once "../controllers/Profile.php";
 <body>
 <div class="wrapper">
     <div class="content">
-        <?include "../templates/header.php"?>
+        <? include "../templates/header.php" ?>
         <h1>Здесь будет админка</h1>
     </div>
-    <?include "../templates/footer.php"?>
+    <? include "../templates/footer.php" ?>
 </div>
 
 </body>

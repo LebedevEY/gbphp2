@@ -1,6 +1,3 @@
-<?php
-require_once "../controllers/Good.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,24 +5,24 @@ require_once "../controllers/Good.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="view/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <script src="js/jquery.js"></script>
-    <script src="js/ajax.js"></script>
+    <script src="view/js/jquery.js"></script>
+    <script src="view/js/ajax.js"></script>
     <title>Шмотка</title>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="content">
-            <? include "../templates/header.php"; ?>
+            <? include "./templates/header.php"; ?>
 
             <div class="page__name center">
                 <h1 class="page__heading">NEW ARRIVALS</h1>
                 <ul class="breadcrumb">
                     <li><a href="index.php">Home /</a></li>
-                    <li><a href="#">Women /</a></li>
+                    <li><a href="index.php?c=catalog">Women /</a></li>
                     <li>
                         <p class="active">New arrivals</p>
                     </li>
@@ -33,12 +30,12 @@ require_once "../controllers/Good.php";
             </div>
 
             <div class="product__image">
-                <img class="product__image__photo" src="img/product_img/<?= $good[0]['img'] ?>" alt="product image">
+                <img class="product__image__photo" src="view/img/product_img/<?= $good[0]['img'] ?>" alt="product image">
             </div>
 
             <div class="descript">
                 <div class="description">
-                    <a href="catalog.php" class="description__link">WOMEN COLLECTION</a>
+                    <a href="index.php?c=catalog" class="description__link">WOMEN COLLECTION</a>
                     <div class="description__hr-1"></div>
                     <h1 class="description__h1"><?= $good[0]['name'] ?></h1>
                     <p class="description__text"><?= $good[0]['description'] ?></p>
@@ -75,7 +72,7 @@ require_once "../controllers/Good.php";
 
         </div>
 
-        <?php include "../templates/footer.php"; ?>
+        <?php include "./templates/footer.php"; ?>
     </div>
 </body>
 
