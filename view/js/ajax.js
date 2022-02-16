@@ -30,8 +30,7 @@ function delGood(id) {
             c: 'cart',
             action: 'delGood'
         },
-        success: function (data) {
-            console.log(data)
+        success: function () {
             // $('#cart').load(`view/cart.php #cart > *`);
             // $(`#sum`).load(`view/cart.php #sum > *`);
             location.reload();
@@ -41,14 +40,16 @@ function delGood(id) {
 
 function clearCart() {
     $.ajax({
-        type: 'POST',
-        url: '../controllers/Cart.php',
+        type: 'GET',
+        url: '../index.php',
         data: {
-            action: 'clear'
+            c: 'cart',
+            action: 'clearCart'
         },
         success: function () {
-            $('#cart').load(`cart.php #cart > *`);
-            $(`#sum`).load(`cart.php #sum > *`);
+            // $('#cart').load(`cart.php #cart > *`);
+            // $(`#sum`).load(`cart.php #sum > *`);
+            location.reload();
         }
     })
 
@@ -56,33 +57,36 @@ function clearCart() {
 
 function moreQuantity(id) {
     $.ajax({
-        type: 'POST',
-        url: '../controllers/Cart.php',
+        type: 'GET',
+        url: '../index.php',
         data: {
             id: id,
-            action: 'count+',
+            c: 'cart',
+            action: 'moreQuantity',
             quantity: document.getElementById('quantity').value
         },
         success: function () {
-            $(`#quantity_${id}`).load(`cart.php #quantity_${id} > *`);
-            $(`#sum`).load(`cart.php #sum > *`);
-
+            // $(`#quantity_${id}`).load(`view/cart.php #quantity_${id} > *`);
+            // $(`#sum`).load(`view/cart.php #sum > *`);
+            location.reload();
         },
     })
 }
 
 function lessQuantity(id) {
     $.ajax({
-        type: 'POST',
-        url: '../controllers/Cart.php',
+        type: 'GET',
+        url: '../index.php',
         data: {
             id: id,
-            action: 'count-',
+            c: 'cart',
+            action: 'lessQuantity',
             quantity: document.getElementById('quantity').value
         },
         success: function () {
-            $(`#quantity_${id}`).load(`cart.php #quantity_${id} > *`);
-            $(`#sum`).load(`cart.php #sum > *`);
+            // $(`#quantity_${id}`).load(`index.php #quantity_${id} > *`);
+            // $(`#sum`).load(`index.php #sum > *`);
+            location.reload();
         }
     })
 }
@@ -92,37 +96,46 @@ let j = 19;
 
 function getMore() {
     $.ajax({
-        type: 'POST',
-        url: './controllers/CatalogC.php',
+        type: 'GET',
+        url: './index.php',
         data: {
-            action: 'get',
-            start_point: i,
-            end_point: j
+            c: 'catalog',
+            action: 'getMore',
+            start: i,
+            end: j
         },
         success: function (data) {
-            $('#catalog').append(data);
-            i += 9
-            j += 9
-            console.log(data)
+            if (data) {
+                $('#catalog').append(data);
+                i += 9
+                j += 9
+            } else {
+                $('#catalog').append(`<div id="end" class='catalog_end'><h3 class='catalog_end-text'>Товаров больше нет...</h3></div>`);
+                setTimeout($('#end').hide(), 1000);
+            }
         }
     })
 }
 
 function order() {
     $.ajax({
-        type: 'POST',
-        url: '../controllers/Cart.php',
+        type: 'GET',
+        url: '../index.php',
         data: {
+            c: 'cart',
             action: 'order'
         },
         success: function (data) {
-            if (data == false) {
+            if (data === false) {
                 alert('Корзина пуста')
             } else {
-                $('#cart').load(`cart.php #cart > *`);
-                $(`#sum`).load(`cart.php #sum > *`);
+                // $('#cart').load(`cart.php #cart > *`);
+                // $(`#sum`).load(`cart.php #sum > *`);
+                location.reload();
                 $('#order').append("<h1>Заказ оформлен!</h1>")
             }
         }
     })
 }
+
+

@@ -24,4 +24,12 @@ switch ($_GET['c']) {
         $controller = new IndexC();
 }
 
+$cart = new CartM();
+$cart_goods = $cart->getCart();
+if (count($cart_goods) != 0) {
+    $_SESSION['cart_empty'] = 0;
+} else {
+    unset($_SESSION['cart_empty']);
+}
+
 echo $controller->request($action);

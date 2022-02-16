@@ -10,7 +10,7 @@ function myAutoloader($className): bool
     ];
     $found = false;
     foreach ($dirs as $dir) {
-        $fileName = __DIR__ . '\\' . $dir . '\\' . $className . '.php';
+        $fileName = __DIR__ . '/' . $dir . '/' . $className . '.php';
         if (is_file($fileName)) {
             require_once($fileName);
             $found = true;

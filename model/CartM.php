@@ -48,8 +48,8 @@ class CartM {
     }
 
     public function setCount($id, $value) {
-        $object = ['count' => $value];
-        return PdoM::Instance()->Update('cart', $object, "good_id=$id");
+        $object = ['`count`' => $value];
+        return PdoM::Instance()->Update("`cart`", $object, "good_id=$id");
     }
 
     public function delGood($id) {

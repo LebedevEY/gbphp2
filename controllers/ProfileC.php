@@ -55,12 +55,3 @@ class ProfileC extends Controller
         echo $page;
     }
 }
-
-//$user = $_SESSION['user'];
-//if (!isset($user)) {
-//    header("Location: login.php");
-//}
-//
-//if ($_POST['action'] == 'exit') {
-//    unset($_SESSION['user']);
-//}
