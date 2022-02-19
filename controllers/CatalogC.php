@@ -2,6 +2,12 @@
 
 class CatalogC extends Controller {
 
+    private $goods;
+
+    public function __construct() {
+        $this->goods= new CatalogM();
+    }
+
     public function index() {
         $goods = new CatalogM();
         $start = 0;
@@ -12,10 +18,9 @@ class CatalogC extends Controller {
     }
 
     public function getMore() {
-        $goods = new CatalogM();
         $start = $_GET['start'];
         $end = $_GET['end'];
-        $catalog = $goods->getMore($start, $end);
+        $catalog = $this->goods->getMore($start, $end);
         foreach ($catalog as $item) {
             $page = $this->Template('templates/good_card.php', array('item' => $item));
             echo $page;

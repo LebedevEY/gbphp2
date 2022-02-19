@@ -2,11 +2,16 @@
 
 class CartC extends Controller
 {
+    private $cart;
+
+    public function __construct() {
+        $this->cart = new CartM();
+    }
+
     public function index()
     {
-        $cart = new CartM();
-        $goods = $cart->getCart();
-        $sumArray = $cart->getSum();
+        $goods = $this->cart->getCart();
+        $sumArray = $this->cart->getSum();
         if (is_array($sumArray[0])){
             $sum = array_values($sumArray[0]);
         }
@@ -20,45 +25,39 @@ class CartC extends Controller
 
     public function addGood()
     {
-        $cart = new CartM();
         $_SESSION['cart_empty'] = 0;
-        return $cart->addGood($_GET['id']);
+        return $this->cart->addGood($_GET['id']);
     }
 
     public function delGood()
     {
-        $cart = new CartM();
-        $cart->delGood($_GET['id']);
-        if (count($cart->getCart()) == 0) {
+        $this->cart->delGood($_GET['id']);
+        if (count($this->cart->getCart()) == 0) {
             unset($_SESSION['cart_empty']);
         }
     }
 
     public function clearCart() {
-        $cart = new CartM();
         unset($_SESSION['cart_empty']);
-        return $cart->clearCart();
+        return $this->cart->clearCart();
     }
 
     public function moreQuantity() {
-        $cart = new CartM();
         $value = $_GET['quantity'] + 1;
         $id = $_GET['id'];
-        echo $cart->setCount($id, $value);
+        echo $this->cart->setCount($id, $value);
     }
 
     public function lessQuantity() {
-        $cart = new CartM();
         $value = $_GET['quantity'] - 1;
         $id = $_GET['id'];
         if ($value > 0) {
-            echo $cart->setCount($id, $value);
+            echo $this->cart->setCount($id, $value);
         }
     }
 
     public function order() {
-        $cart = new CartM();
-        $goods = $cart->getCart();
+        $goods = $this->cart->getCart();
         $user_id = $_SESSION['user'][0]['id'];
         $query = "SELECT MAX(order_id) FROM `orders` WHERE user_id = $user_id";
         $i = PdoM::Instance()->Select($query);
@@ -68,7 +67,7 @@ class CartC extends Controller
             $values = [];
             array_push($values, $good['good_id'], $good['user_id'], $good['count'], "$order_id");
             var_dump($good);
-            $cart->order($columns, $values);
+            $this->cart->order($columns, $values);
         }
         $this->clearCart();
     }
