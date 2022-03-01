@@ -14,10 +14,10 @@
 <body>
 <div class="wrapper">
     <div class="content">
-        <? include "../templates/header.php" ?>
+        <?php include "../templates/header.php" ?>
         <h1>Здесь будет админка</h1>
     </div>
-    <? include "../templates/footer.php" ?>
+    <?php include "../templates/footer.php" ?>
 </div>
 
 </body>

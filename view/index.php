@@ -16,7 +16,7 @@
 <body>
 <div class="wrapper">
     <div class="content">
-
+<!--    Вынос общих для разных страниц элементов (header, footer, карточка товаров) в шаблон, чтобы избавиться от copy-paste.-->
         <?php include "./templates/header.php"; ?>
 
         <div class="promo">

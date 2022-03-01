@@ -7,7 +7,7 @@
     <list default="true" id="c158c3e6-4bd0-459e-b9f3-56f7c4bc34da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/CartC.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CartC.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/CatalogC.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CatalogC.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="HW_Final" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -91,7 +96,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../architecture" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -170,7 +175,8 @@
       <workItem from="1645026754798" duration="1008000" />
       <workItem from="1645036456997" duration="4255000" />
       <workItem from="1645120227156" duration="918000" />
-      <workItem from="1645267854629" duration="734000" />
+      <workItem from="1645267854629" duration="1587000" />
+      <workItem from="1646155969644" duration="1700000" />
     </task>
     <servers />
   </component>
