@@ -1,6 +1,6 @@
 <div class="products__card">
-    <a href="product.php?id=<?= $item['id'] ?>"><img class="card__image"
-                                                     src="img/product_img/<?= $item['img'] ?>"
+    <a href="index.php?c=good&id=<?= $item['id'] ?>"><img class="card__image"
+                                                     src="view/img/product_img/<?= $item['img'] ?>"
                                                      alt="product image"></a>
     <a href="product.php?id=<?= $item['id'] ?>">
         <h3 class="card__h3"><?= $item['name'] ?></h3>

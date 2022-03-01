@@ -40,7 +40,7 @@
     </section>
     <div class="footer__review center">
         <div class="review">
-            <img src="img/review_img.png" alt="photo">
+            <img src="view/img/review_img.png" alt="photo">
             <p class="review__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,<i> a pulvinar
                     purus
                     condimentum</i>“</p>
@@ -57,7 +57,7 @@
         </div>
     </div>
     <div class="footer__bottom center">
-        <p class="footer__copy">&copy; 2021 Brand All Rights Reserved.</p>
+        <p class="footer__copy">&copy; 2022 Brand All Rights Reserved.</p>
         <div class="smm">
             <a class="smm__link" href="https://www.facebook.com/" target="_blank">
                 <svg class="smm_icon"

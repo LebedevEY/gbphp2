@@ -1,9 +1,8 @@
 <?php
 
-include_once "PdoM.php";
-
 class CartM {
     public function addGood($id) {
+        $user_id = $_SESSION['user'][0]['id'];
         $good = PdoM::Instance()->Select("SELECT * FROM goods WHERE id=$id");
         $i = PdoM::Instance()->Select("SELECT * FROM cart WHERE good_id = $id");
         if (count($i) != 0) {
@@ -20,25 +19,37 @@ class CartM {
                 }
                 $values[] = "'$value'";
             }
-            array_push($columns, "`count`", "`user`");
-            array_push($values, "'1'", "'guest'");
-            return PdoM::Instance()->Insert('cart', $columns, $values);
+            array_push($columns, "`count`", "`user_id`");
+            array_push($values, "'1'", "'$user_id'");
+            $columns_str = implode(',', $values);;
+            if ($user_id !== null) {
+                return PdoM::Instance()->Insert('cart', $columns, $values);
+            } else {
+                return false;
+            }
+
         }
     }
 
     public function getCart() {
-        $query = "SELECT * FROM `cart` ORDER BY 'good_id'";
-        return PdoM::Instance()->Select($query);
+        $user_id = $_SESSION['user'][0]['id'];
+        if (isset($user_id)) {
+            $query = "SELECT * FROM `cart` WHERE user_id = $user_id ORDER BY 'good_id'";
+            return PdoM::Instance()->Select($query);
+        } else {
+            return array();
+        }
     }
 
     public function getSum() {
-        $query = "SELECT SUM(`price` * `count`) FROM `cart`";
+        $user_id = $_SESSION['user'][0]['id'];
+        $query = "SELECT SUM(`price` * `count`) FROM `cart` WHERE user_id = $user_id";
         return PdoM::Instance()->Select($query);
     }
 
     public function setCount($id, $value) {
-        $object = ['count' => $value];
-        return PdoM::Instance()->Update('cart', $object, "good_id=$id");
+        $object = ['`count`' => $value];
+        return PdoM::Instance()->Update("`cart`", $object, "good_id=$id");
     }
 
     public function delGood($id) {
@@ -47,5 +58,9 @@ class CartM {
 
     public function clearCart() {
         return PdoM::Instance()->Delete('cart', "id>0");
+    }
+
+    public function order($columns, $values) {
+        return PdoM::Instance()->Insert('orders', $columns, $values);
     }
 }

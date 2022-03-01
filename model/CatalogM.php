@@ -1,5 +1,6 @@
 <?php
-require_once "PdoM.php";
+
+require_once 'PdoM.php';
 
  class CatalogM {
      public function getCatalog() {

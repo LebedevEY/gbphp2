@@ -1,7 +1,7 @@
 <header class="header center">
     <div class="header__left">
-        <a href="/public/index.php"><img src="/public/img/logo.svg" alt="logo"></a>
-        <a class="header__search" href="#"><img src="/public/img/search.svg" alt="search"></a>
+        <a href="index.php"><img src="/view/img/logo.svg" alt="logo"></a>
+        <a class="header__search" href="#"><img src="/view/img/search.svg" alt="search"></a>
     </div>
     <div class="header__right">
         <input id="switcher" type="checkbox">
@@ -36,42 +36,42 @@
             <h3 class="nav__heading">Menu</h3>
             <h4 class="nav__menu">MAN</h4>
             <ul class="nav__list">
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Accessories</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Bags</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Denim</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">T-Shirts</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Accessories</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Bags</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Denim</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">T-Shirts</a></li>
             </ul>
 
             <h4 class="nav__menu">Woman</h4>
             <ul class="nav__list">
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Accessories</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Jackets & Coats</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Polos</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">T-Shirts</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Shirts</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Accessories</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Jackets & Coats</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Polos</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">T-Shirts</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Shirts</a></li>
             </ul>
 
             <h4 class="nav__menu">Kids</h4>
             <ul class="nav__list">
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Accessories</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Jackets & Coats</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Polos</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">T-Shirts</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Shirts</a></li>
-                <li class="nav__li"><a class="nav__link" href="/public/catalog.php">Bags</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Accessories</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Jackets & Coats</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Polos</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">T-Shirts</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Shirts</a></li>
+                <li class="nav__li"><a class="nav__link" href="#">Bags</a></li>
             </ul>
         </nav>
-        <p class="header__icons"><label for="switcher"><img src="/public/img/menu.svg" alt="menu"></label>
+        <p class="header__icons"><label for="switcher"><img src="/view/img/menu.svg" alt="menu"></label>
         </p>
         <div class="header__links">
-            <a class="header__icons" href="/public/registration.php"><img src="/public/img/account.svg"
-                                                                          alt="account"></a>
-            <a class="header__icons" href="/public/cart.php"><img src="/public/img/cart.svg" alt="cart"><img id="circle"
-                                                                                                             class="cart__circle"
-                                                                                                             <?php if (isset($_SESSION['cart_empty']) && $_SESSION['cart_empty'] === 0) {
+            <a class="header__icons" href="index.php?c=profile&action=index"><img src="/view/img/account.svg"
+                                                                 alt="account"></a>
+            <a class="header__icons" href="index.php?c=cart"><img src="/view/img/cart.svg" alt="cart"><img id="circle"
+                                                                                                         class="cart__circle"
+                                                                                                         <?php if (isset($_SESSION['cart_empty']) && $_SESSION['cart_empty'] === 0) {
                                                                                                                  echo 'style="display: block"';
-                                                                                                             } ?>src="/public/img/white_circle.png"
-                                                                                                             alt="#"></a>
+                                                                                                             } ?>src="/view/img/white_circle.png"
+                                                                                                         alt="#"></a>
         </div>
     </div>
 </header>

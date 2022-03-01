@@ -1,7 +1,6 @@
 <?php
-session_start();
 
-include_once "../config.php";
+require_once './config.php';
 
 class PdoM {
     private static $instance;
@@ -21,14 +20,12 @@ class PdoM {
         $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
 
-
     public function Select($query) {
         $q = $this->db->prepare($query);
         $q->execute();
 
         if ($q -> errorCode() != PDO::ERR_NONE) {
-            $info = $q -> errorInfo();
-            die($info[2]);
+           return $q -> errorInfo();
         }
 
         return $q->fetchAll();
@@ -37,7 +34,7 @@ class PdoM {
     public function Insert($table, $columns, $values) {
         $columns_str = implode(',', $columns);
         $values_str = implode(',', $values);
-        $query = "INSERT INTO $table ($columns_str) VALUES ($values_str)";
+        $query = "INSERT INTO `$table` ($columns_str) VALUES ($values_str)";
         $q = $this->db->prepare($query);
         $q->execute();
 
@@ -79,46 +76,3 @@ class PdoM {
         return $q->rowCount();
     }
 }
-
-//function getAll ($connect, $table): array
-//{
-//    $sql = "select * from {$table}";
-//    $res = mysqli_query($connect, $sql);
-//    $result = [];
-//    for ($i = 0; $i < mysqli_num_rows($res); $i++) {
-//        $result[] = mysqli_fetch_assoc($res);
-//    }
-//
-//    return $result;
-//}
-//
-//function getGoods ($connect, $table, $start_point, $end_point)
-//{
-//    $sql = "select * from {$table} where id>{$start_point} and id<{$end_point}";
-//    $res = mysqli_query($connect, $sql);
-//    if (mysqli_num_rows($res) != 0) {
-//        for ($i = 0; $i < mysqli_num_rows($res); $i++) {
-//            $result[] = mysqli_fetch_assoc($res);
-//        }
-//        return $result;
-//    }
-//}
-//
-//function getOne($connect, $id, $table) {
-//    $sql = sprintf("select * from {$table} where id=%d", (int)$id);
-//    $res = mysqli_query($connect, $sql);
-//    return mysqli_fetch_assoc($res);
-//}
-//
-//function cartCounter ($connect, $id, $count) {
-//    $id = (int)$id;
-//    $sql = "UPDATE `cart` SET `count` = '%d' WHERE `good_id` = '%d'";
-//    $res = sprintf($sql, mysqli_real_escape_string($connect, $count), $id);
-//    return mysqli_query($connect, $res);
-//}
-//
-//function getSum ($connect, $column, $count, $table) {
-//    $sql = "SELECT SUM(`{$column}` * `{$count}`) FROM `{$table}`";
-//    $res = mysqli_query($connect, $sql);
-//    return mysqli_fetch_row($res);
-//}
