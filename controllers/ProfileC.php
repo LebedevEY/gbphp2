@@ -46,6 +46,7 @@ class ProfileC extends Controller
         $user = $USER->getUser($user_info['email'], $user_info['password']);
         $_SESSION['user'] = $user;
         $page = $this->Template('view/profile.php', array('user' => $user));
+
         echo $page;
     }
 
@@ -53,5 +54,14 @@ class ProfileC extends Controller
         unset($_SESSION['user']);
         $page = $this->Template('view/login.php');
         echo $page;
+    }
+
+    function isAdmin(): bool
+    {
+        if ($_SESSION['user'][0]['admin'] == 1) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
