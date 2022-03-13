@@ -1316,6 +1316,11 @@ body {
   background: white;
 }
 
+.admin_link {
+  color: white;
+  margin-right: 40px;
+}
+
 @media (max-width: 1023px) {
   .center {
     padding-left: calc(50% - 368px);

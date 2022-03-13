@@ -2,7 +2,7 @@
 
 class CartC extends Controller
 {
-    private $cart;
+    private CartM $cart;
 
     public function __construct() {
         $this->cart = new CartM();
@@ -66,7 +66,6 @@ class CartC extends Controller
             $columns = ['`good_id`', '`user_id`', '`count`', '`order_id`'];
             $values = [];
             array_push($values, $good['good_id'], $good['user_id'], $good['count'], "$order_id");
-            var_dump($good);
             $this->cart->order($columns, $values);
         }
         $this->clearCart();

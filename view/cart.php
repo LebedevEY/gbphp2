@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="view/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="view/js/jquery.js"></script>
     <script src="view/js/ajax.js"></script>
     <title>Корзина</title>
@@ -61,7 +63,7 @@
                                 </li>
                                 <li class="cart__product__content__list__item">Quantity:
                                     <div class="quantity__div" id="quantity_<?= $item['good_id'] ?>">
-                                        <input id="quantity" class="quantity" type="text" disabled value="<?= $item['count'] ?>">
+                                        <input id="quantity_value_<?= $item['good_id'] ?>" class="quantity" type="text" disabled value="<?= $item['count'] ?>">
                                         <button class="quantity__button"
                                                 onclick="moreQuantity(<?= $item['good_id'] ?>)">+
                                         </button>
@@ -77,9 +79,7 @@
 
                 <div class="cart__buttons">
                     <button class="cart__button" onclick="clearCart()">Clear shopping cart</button>
-                    <form action="catalog.php">
-                        <button class="cart__button">Continue shopping</button>
-                    </form>
+                    <a href="index.php?c=catalog"><button class="cart__button">Continue shopping</button></a>
                 </div>
             </div>
             <div class="cart__right">

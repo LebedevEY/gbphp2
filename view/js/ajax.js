@@ -12,9 +12,25 @@ function addGood(id) {
             console.log(data)
             if (data) {
                 document.getElementById('circle').style.display = 'block';
-                alert('Товар добавлен в корзину');
+                Toastify({
+                    text: "Товар добавлен в корзину",
+                    duration: 3000,
+                    close: true,
+                    style: {
+                        marginTop: "65px",
+                        background: "#F16D7F"
+                    }
+                }).showToast();
             } else {
-                alert('Для покупки товара необходимо зарегистрироваться или войти')
+                Toastify({
+                    text: "Для покупки товара необходимо зарегистрироваться или войти",
+                    duration: 3000,
+                    close: true,
+                    style: {
+                        marginTop: "65px",
+                        background: "#F16D7F"
+                    }
+                }).showToast();
             }
         }
     });
@@ -31,9 +47,8 @@ function delGood(id) {
             action: 'delGood'
         },
         success: function () {
-            // $('#cart').load(`view/cart.php #cart > *`);
-            // $(`#sum`).load(`view/cart.php #sum > *`);
-            location.reload();
+            $('#cart').load(`http://gbphp2/index.php?c=cart #cart > *`);
+            $(`#sum`).load(`http://gbphp2/index.php?c=cart #sum > *`);
         }
     })
 }
@@ -47,9 +62,8 @@ function clearCart() {
             action: 'clearCart'
         },
         success: function () {
-            // $('#cart').load(`cart.php #cart > *`);
-            // $(`#sum`).load(`cart.php #sum > *`);
-            location.reload();
+            $('#cart').load(`http://gbphp2/index.php?c=cart #cart > *`);
+            $(`#sum`).load(`http://gbphp2/index.php?c=cart #sum > *`);
         }
     })
 
@@ -63,12 +77,11 @@ function moreQuantity(id) {
             id: id,
             c: 'cart',
             action: 'moreQuantity',
-            quantity: document.getElementById('quantity').value
+            quantity: document.getElementById(`quantity_value_${id}`).value
         },
         success: function () {
-            // $(`#quantity_${id}`).load(`view/cart.php #quantity_${id} > *`);
-            // $(`#sum`).load(`view/cart.php #sum > *`);
-            location.reload();
+            $(`#quantity_${id}`).load(`http://gbphp2/index.php?c=cart #quantity_${id} > *`);
+            $(`#sum`).load(`http://gbphp2/index.php?c=cart #sum > *`);
         },
     })
 }
@@ -81,12 +94,11 @@ function lessQuantity(id) {
             id: id,
             c: 'cart',
             action: 'lessQuantity',
-            quantity: document.getElementById('quantity').value
+            quantity: document.getElementById(`quantity_value_${id}`).value
         },
         success: function () {
-            // $(`#quantity_${id}`).load(`index.php #quantity_${id} > *`);
-            // $(`#sum`).load(`index.php #sum > *`);
-            location.reload();
+            $(`#quantity_${id}`).load(`http://gbphp2/index.php?c=cart #quantity_${id} > *`);
+            $(`#sum`).load(`http://gbphp2/index.php?c=cart #sum > *`);
         }
     })
 }
@@ -110,8 +122,14 @@ function getMore() {
                 i += 9
                 j += 9
             } else {
-                $('#catalog').append(`<div id="end" class='catalog_end'><h3 class='catalog_end-text'>Товаров больше нет...</h3></div>`);
-                setTimeout($('#end').hide(), 1000);
+                Toastify({
+                    text: "Товаров больше нет",
+                    duration: 3000,
+                    close: true,
+                    style: {
+                        background: "#F16D7F"
+                    }
+                }).showToast();
             }
         }
     })
@@ -129,9 +147,8 @@ function order() {
             if (data === false) {
                 alert('Корзина пуста')
             } else {
-                // $('#cart').load(`cart.php #cart > *`);
-                // $(`#sum`).load(`cart.php #sum > *`);
-                location.reload();
+                $('#cart').load(`http://gbphp2/index.php?c=cart #cart > *`);
+                $(`#sum`).load(`http://gbphp2/index.php?c=cart #sum > *`);
                 $('#order').append("<h1>Заказ оформлен!</h1>")
             }
         }

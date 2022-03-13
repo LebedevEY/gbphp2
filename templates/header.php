@@ -4,6 +4,11 @@
         <a class="header__search" href="#"><img src="/view/img/search.svg" alt="search"></a>
     </div>
     <div class="header__right">
+        <?
+        if ($_SESSION['user'][0]['admin'] == 1) {
+            ?><a class="admin_link" href="index.php?c=admin">Админка</a><?
+        }
+        ?>
         <input id="switcher" type="checkbox">
         <nav class="nav">
             <div class="header__links header__links_mobile">
@@ -64,7 +69,7 @@
         <p class="header__icons"><label for="switcher"><img src="/view/img/menu.svg" alt="menu"></label>
         </p>
         <div class="header__links">
-            <a class="header__icons" href="index.php?c=profile&action=index"><img src="/view/img/account.svg"
+            <a class="header__icons" href="index.php?c=profile"><img src="/view/img/account.svg"
                                                                  alt="account"></a>
             <a class="header__icons" href="index.php?c=cart"><img src="/view/img/cart.svg" alt="cart"><img id="circle"
                                                                                                          class="cart__circle"

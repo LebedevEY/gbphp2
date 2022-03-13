@@ -3,6 +3,8 @@
 include_once 'autoloader.php';
 
 $action = (isset($_GET['action'])) ? $_GET['action'] : 'index';
+$user = new ProfileC();
+
 
 switch ($_GET['c']) {
     case 'index':
@@ -20,6 +22,11 @@ switch ($_GET['c']) {
     case 'profile':
         $controller = new ProfileC();
         break;
+    case 'admin':
+        if ($user->isAdmin()) {
+            $controller = new AdminC();
+            break;
+        }
     default:
         $controller = new IndexC();
 }
